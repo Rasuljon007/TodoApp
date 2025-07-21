@@ -12,6 +12,6 @@
   }
 
   .tabActive {
-    @apply active border-b-2 border-b-blue-500;
+    @apply !border-b-2 !border-b-blue-500;
   }
 }
