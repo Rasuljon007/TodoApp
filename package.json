@@ -1,0 +1,22 @@
+{
+  "name": "quiz",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev:tailwind": "bun tailwindcss -i ./src/styles/index.css -o  ./dist/index.css --watch",
+    "dev:ts": "bun build --watch --outfile=./dist/index.js ./src/index.ts",
+    "dev:html": "bun live-server --port=3000 --entry-file=index.html public",
+    "dev": "concurrently \"bun dev:tailwind\" \"bun dev:ts\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "3",
+    "live-server": "^1.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

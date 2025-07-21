@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="WIDTH=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/index.css" />
+    <title>TODO APP</title>
+  </head>
+  <body class="grid h-screen place-items-center bg-blue-500">
+    <div class="flex h-[600px] w-[400px] flex-col gap-2 rounded-md bg-white p-4">
+      <form class="flex w-full" id="todo-form">
+        <input required minlength="4" placeholder="Add a new task" class="flex-1 rounded-[6px] border border-blue-500 p-2 outline-none" />
+      </form>
+
+      <div class="border-b border-gray-200 text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400">
+        <div class="-mb-px flex flex-wrap">
+          <button class="tab tab_active" id="tab-all-btn">All</button>
+          <button class="tab tab-active" id="tab-pending-btn">Pending</button>
+          <button class="tab" id="tab-completed-btn">Completed</button>
+        </div>
+      </div>
+
+      <ul class="flex w-full flex-col gap-2" id="todos-wrapper"></ul>
+    </div>
+  </body>
+  <script src="/dist/index.js" type="module"></script>
+</html>
